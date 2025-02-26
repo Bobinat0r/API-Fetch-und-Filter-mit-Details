@@ -31,6 +31,20 @@ fetch("https://dummyjson.com/products")
 });  
 
 function showProductDetails (product) {
-    console.log(product);
-    
+    console.log(product.description);
+    const productDetails = document.getElementById("productCard");
+    productDetails.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = product.images[0];
+    img.width = 400;
+    productDetails.appendChild(img);
+    const name = document.createElement("h1");
+    name.textContent = product.name;
+    productDetails.appendChild(name);
+    const price = document.createElement("p");  
+    price.textContent = product.price;
+    productDetails.appendChild(price);
+    const description = document.createElement("p");
+    description.textContent = product.description;
+    productDetails.appendChild(description); // Hinzufügen der Beschreibung
 }
