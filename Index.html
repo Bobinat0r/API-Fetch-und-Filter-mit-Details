@@ -10,17 +10,19 @@
   <script src="product.js"></script>
 </head>
 <body>
-<h1>Hello world</h1>
 <div>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <tr>
-                    <td><img src="" alt="product" style="width: 100%"></td>
-                    <td><h3>Product 1</h3></td>
-                    <td><p>Price: $100</p></td>
-                    <td><button class="btn btn-primary" onclick="addToCart()">Add to cart</button></td>
-                </tr>
-            </div>
+                <table id="productTable" class="table table-striped">
+                    <tr>
+                        <th>product ID</th>
+                        <th>product name</th>
+                        <th>product price</th>
+                        <th>product preview</th>
+                        <th>product info</th>
+                    </tr>
+                </table>
+                </div>
 </div>
 </body>
